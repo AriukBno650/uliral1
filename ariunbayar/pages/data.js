@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Data(){
     var[grid , setGrid] = useState(false);
@@ -31,8 +32,10 @@ export default function Data(){
         
 
     ];
+    const router = useRouter();
     return(
         <div className="h-screen w-screen flex bg-white flex-col items-center ">
+            <button className=" bg-white text-black font-mono px-5 py-2 border rounded-lg  -translate-y-5 hover:shadow-xl hover:bg-gray-300 mx-3" onClick={() =>router.back()}>Back</button>
             <div className="h-1/6 w-full flex justify-around items-center">
             <h1 className="text-black font-bold text-2xl ">Titles</h1>
             <button className="bg-blue-600 flex justify-center items-center text-black h-12 w-28 border rounded-xl" onClick={() => {setGrid(!grid)}}>

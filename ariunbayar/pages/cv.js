@@ -1,10 +1,13 @@
 import React from 'react';
+import { useRouter } from "next/router";
 <script src="https://kit.fontawesome.com/b922fdab7f.js" crossorigin="anonymous"></script>
 
 export default function cv(){
+    const router = useRouter();
     return(
         
         <div className="w-screen h-screen bg-slate-600 flex justify-center items-center ">
+            <button className=" bg-white text-black font-mono px-5 py-2 border rounded-lg  -translate-y-5 hover:shadow-xl hover:bg-gray-300 mx-3" onClick={() =>router.back()}>Back</button>
         <div className="w-1/5 h-1/2 bg-white rounded-xl flex flex-col items-center shadow-black-500/50">
             <div className="w-full h-1/2 flex flex-col justify-end items-center translate-y-4">
                 <div className="bg-[url('https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/16620/production/_91408619_55df76d5-2245-41c1-8031-07a4da3f313f.jpg')] bg-center bg-cover w-40 aspect-square rounded-full border"></div>

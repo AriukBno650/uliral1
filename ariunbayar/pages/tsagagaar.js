@@ -1,10 +1,14 @@
+import { useRouter } from "next/router";
+
 
 export default function tsagagaar() {
+    const router = useRouter();
     return (
         <body class="w-full h-screen flex items-center justify-center bg-slate-900">
           <div class="w-[98%] h-[96%] flex justify-between items-end">
               <div class="w-24 h-full bg-slate-700 rounded-3xl flex flex-col items-center">
                   <div class="w-12 h-12 rounded-full bg-slate-800 mt-4 flex items-center justify-center">
+                  <button className=" bg-white text-black font-mono px-5 py-2 border rounded-lg  -translate-y-5 hover:shadow-xl hover:bg-gray-300 mx-3" onClick={() =>router.back()}>Back</button>
 
                   </div>
                   <div class="w-full h-1/2 mt-8 flex flex-col items-center">
